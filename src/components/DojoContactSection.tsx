@@ -43,22 +43,22 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
   return (
     <section
       id="contact"
-      className="py-20 md:py-28 border-t border-[#16201B] bg-[#070A08]"
+      className="py-20 md:py-28 border-t border-[var(--border-subtle)] bg-[var(--bg-section-alt)] transition-colors"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Direct Dojo Coordinates & Quick Copy */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3">
-              <div className="text-xs font-mono-tabular text-[#8A9990]">
-                <span>礼 · INITIATE DIALOGUE</span>
+              <div className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                <span className="text-[var(--text-primary)] font-medium">礼 · INITIATE DIALOGUE</span>
                 <span className="mx-2" aria-hidden="true">·</span>
-                <span className="text-[#10B981]">MAHDIA, TUNISIA & REMOTE</span>
+                <span className="text-[var(--accent-text)] font-medium">MAHDIA, TUNISIA & REMOTE</span>
               </div>
-              <h2 className="text-2xl md:text-4xl font-semibold text-[#E4EBE6] tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-semibold text-[var(--text-primary)] tracking-tight">
                 04. Enter the Dojo & Build Together
               </h2>
-              <p className="text-sm md:text-base text-[#9FB0A6] leading-relaxed">
+              <p className="text-sm md:text-base text-[var(--text-body)] leading-relaxed">
                 Currently seeking a full-time role in a product-focused company or high-impact full-stack & AI
                 engineering collaborations. Reach out directly via email, phone, LinkedIn, or the dispatch composer.
               </p>
@@ -66,12 +66,12 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
 
             {/* Direct Coordinates with One-Click Copy */}
             <div className="space-y-4">
-              <div className="p-5 bg-[#0B100D] border border-[#18241E] rounded-2xl flex items-center justify-between gap-4">
+              <div className="p-5 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl flex items-center justify-between gap-4 transition-colors">
                 <div>
-                  <div className="text-xs font-mono-tabular text-[#7E8F85]">DIRECT ELECTRONIC MAIL</div>
+                  <div className="text-xs font-mono-tabular text-[var(--text-muted)]">DIRECT ELECTRONIC MAIL</div>
                   <a
                     href={`mailto:${PROFILE_DATA.email}`}
-                    className="text-sm md:text-base font-medium text-[#E4EBE6] hover:text-[#10B981] transition-colors break-all"
+                    className="text-sm md:text-base font-medium text-[var(--text-primary)] hover:text-[var(--accent-text)] transition-colors break-all"
                   >
                     {PROFILE_DATA.email}
                   </a>
@@ -79,7 +79,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                 <button
                   type="button"
                   onClick={() => copyValue(PROFILE_DATA.email, 'email')}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-[#E4EBE6] bg-[#121B16] hover:bg-[#10B981] hover:text-[#050505] rounded-lg transition-colors shrink-0 whitespace-nowrap"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-[var(--text-primary)] bg-[var(--bg-control)] hover:bg-[#38BDF8] hover:text-[#050505] rounded-lg transition-colors shrink-0 whitespace-nowrap"
                 >
                   {copiedField === 'email' ? (
                     <>
@@ -95,12 +95,12 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                 </button>
               </div>
 
-              <div className="p-5 bg-[#0B100D] border border-[#18241E] rounded-2xl flex items-center justify-between gap-4">
+              <div className="p-5 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl flex items-center justify-between gap-4 transition-colors">
                 <div>
-                  <div className="text-xs font-mono-tabular text-[#7E8F85]">DIRECT TELEPHONE LINE</div>
+                  <div className="text-xs font-mono-tabular text-[var(--text-muted)]">DIRECT TELEPHONE LINE</div>
                   <a
                     href={`tel:${PROFILE_DATA.phone.replace(/\s+/g, '')}`}
-                    className="text-sm md:text-base font-mono-tabular font-medium text-[#E4EBE6] hover:text-[#10B981] transition-colors"
+                    className="text-sm md:text-base font-mono-tabular font-medium text-[var(--text-primary)] hover:text-[var(--accent-text)] transition-colors"
                   >
                     {PROFILE_DATA.phone}
                   </a>
@@ -108,7 +108,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                 <button
                   type="button"
                   onClick={() => copyValue(PROFILE_DATA.phone, 'phone')}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-[#E4EBE6] bg-[#121B16] hover:bg-[#10B981] hover:text-[#050505] rounded-lg transition-colors shrink-0 whitespace-nowrap"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-[var(--text-primary)] bg-[var(--bg-control)] hover:bg-[#38BDF8] hover:text-[#050505] rounded-lg transition-colors shrink-0 whitespace-nowrap"
                 >
                   {copiedField === 'phone' ? (
                     <>
@@ -132,19 +132,19 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                   href={PROFILE_DATA.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#E4EBE6] hover:text-[#10B981] underline-offset-4 hover:underline transition-colors"
+                  className="inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-text)] underline-offset-4 hover:underline transition-colors"
                 >
                   <span>LinkedIn {PROFILE_DATA.linkedinHandle}</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#10B981]" />
+                  <ArrowUpRight className="w-4 h-4 text-[var(--accent-text)]" />
                 </a>
                 <a
                   href={PROFILE_DATA.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#E4EBE6] hover:text-[#10B981] underline-offset-4 hover:underline transition-colors"
+                  className="inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-text)] underline-offset-4 hover:underline transition-colors"
                 >
                   <span>GitHub {PROFILE_DATA.githubHandle}</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#10B981]" />
+                  <ArrowUpRight className="w-4 h-4 text-[var(--accent-text)]" />
                 </a>
               </div>
 
@@ -152,7 +152,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                 <button
                   type="button"
                   onClick={onOpenDossier}
-                  className="px-4 py-2.5 text-xs font-medium text-[#E4EBE6] bg-[#101814] hover:bg-[#17241D] border border-[#1E2E25] rounded-lg transition-colors whitespace-nowrap"
+                  className="px-4 py-2.5 text-xs font-medium text-[var(--text-primary)] bg-[var(--bg-control)] hover:bg-[var(--bg-control-hover)] border border-[var(--border-card)] rounded-lg transition-colors whitespace-nowrap"
                 >
                   Open Complete Printable CV Dossier
                 </button>
@@ -161,25 +161,25 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
           </div>
 
           {/* Right Column: Interactive Dispatch Composer */}
-          <div className="lg:col-span-7 p-6 md:p-8 bg-[#0B100D] border border-[#18241E] rounded-2xl">
+          <div className="lg:col-span-7 p-6 md:p-8 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl transition-colors">
             <form onSubmit={handleDispatchSubmit} className="space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[#16201B]">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[var(--border-subtle)]">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#E4EBE6]">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Compose Engineering Dispatch
                   </h3>
-                  <p className="text-xs text-[#8A9990]">
+                  <p className="text-xs text-[var(--text-muted)]">
                     Select your mission focus and prepare a direct brief for Jihed Ben Othmen.
                   </p>
                 </div>
-                <span className="text-xs font-mono-tabular text-[#10B981]">
+                <span className="text-xs font-mono-tabular text-[var(--accent-text)] font-medium">
                   RESPONSE TARGET: &lt; 24H
                 </span>
               </div>
 
               {/* Mission Type Selector */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono-tabular text-[#95A69C]">
+                <label className="block text-xs font-mono-tabular text-[var(--text-secondary)]">
                   01. SELECT ENGAGEMENT DISCIPLINE
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -197,8 +197,8 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                         onClick={() => setEngagementType(option)}
                         className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors whitespace-nowrap ${
                           active
-                            ? 'bg-[#10B981] text-[#050505] border-[#10B981] font-semibold'
-                            : 'bg-[#080B09] text-[#95A69C] border-[#18241E] hover:text-[#E4EBE6]'
+                            ? 'bg-[#38BDF8] text-[#050505] border-[#38BDF8] font-semibold'
+                            : 'bg-[var(--bg-card-alt)] text-[var(--text-secondary)] border-[var(--border-card)] hover:text-[var(--text-primary)]'
                         }`}
                       >
                         {option}
@@ -213,7 +213,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                 <div className="space-y-1.5">
                   <label
                     htmlFor="sender-name"
-                    className="block text-xs font-mono-tabular text-[#95A69C]"
+                    className="block text-xs font-mono-tabular text-[var(--text-secondary)]"
                   >
                     02. YOUR NAME
                   </label>
@@ -223,14 +223,14 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                     value={senderName}
                     onChange={(e) => setSenderName(e.target.value)}
                     placeholder="e.g. Sarah Al-Mansoor"
-                    className="w-full px-3.5 py-2.5 text-sm bg-[#070A08] border border-[#19261F] rounded-lg text-[#E4EBE6] placeholder-[#526158] focus:outline-none focus:border-[#10B981]"
+                    className="w-full px-3.5 py-2.5 text-sm bg-[var(--bg-card-alt)] border border-[var(--border-card)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-[#38BDF8]"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <label
                     htmlFor="sender-org"
-                    className="block text-xs font-mono-tabular text-[#95A69C]"
+                    className="block text-xs font-mono-tabular text-[var(--text-secondary)]"
                   >
                     03. COMPANY OR TEAM
                   </label>
@@ -240,7 +240,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                     value={senderOrg}
                     onChange={(e) => setSenderOrg(e.target.value)}
                     placeholder="e.g. Product Engineering Team"
-                    className="w-full px-3.5 py-2.5 text-sm bg-[#070A08] border border-[#19261F] rounded-lg text-[#E4EBE6] placeholder-[#526158] focus:outline-none focus:border-[#10B981]"
+                    className="w-full px-3.5 py-2.5 text-sm bg-[var(--bg-card-alt)] border border-[var(--border-card)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-[#38BDF8]"
                   />
                 </div>
               </div>
@@ -249,7 +249,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
               <div className="space-y-1.5">
                 <label
                   htmlFor="dispatch-message"
-                  className="block text-xs font-mono-tabular text-[#95A69C]"
+                  className="block text-xs font-mono-tabular text-[var(--text-secondary)]"
                 >
                   04. ARCHITECTURAL BRIEF OR ROLE OVERVIEW
                 </label>
@@ -258,7 +258,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                   rows={4}
                   value={messageBody}
                   onChange={(e) => setMessageBody(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-[#070A08] border border-[#19261F] rounded-lg text-[#E4EBE6] placeholder-[#526158] focus:outline-none focus:border-[#10B981] resize-y"
+                  className="w-full px-3.5 py-2.5 text-sm bg-[var(--bg-card-alt)] border border-[var(--border-card)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-[#38BDF8] resize-y"
                 />
               </div>
 
@@ -266,7 +266,7 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-[#050505] bg-[#10B981] hover:bg-[#34D399] rounded-lg transition-colors whitespace-nowrap"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-[#050505] bg-[#38BDF8] hover:bg-[#7DD3FC] rounded-lg transition-colors whitespace-nowrap"
                 >
                   <Copy className="w-3.5 h-3.5" />
                   <span>
@@ -280,23 +280,23 @@ export const DojoContactSection: React.FC<DojoContactSectionProps> = ({
                   href={`mailto:${PROFILE_DATA.email}?subject=${encodeURIComponent(
                     formattedSubject
                   )}&body=${encodeURIComponent(formattedFullBrief)}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-[#E4EBE6] bg-[#121B16] hover:bg-[#19261F] border border-[#1E2E25] rounded-lg transition-colors whitespace-nowrap"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-[var(--text-primary)] bg-[var(--bg-control)] hover:bg-[var(--bg-control-hover)] border border-[var(--border-card)] rounded-lg transition-colors whitespace-nowrap"
                 >
-                  <Send className="w-3.5 h-3.5 text-[#10B981]" />
+                  <Send className="w-3.5 h-3.5 text-[var(--accent-text)]" />
                   <span>Launch Mail Client</span>
                 </a>
               </div>
 
               {dispatchConfirmed && (
-                <div className="p-4 bg-[#0D1913] border border-[#10B981]/50 rounded-xl text-xs text-[#B8C7BE] flex items-center justify-between gap-4">
+                <div className="p-4 bg-[var(--bg-active-tint)] border border-[#38BDF8] rounded-xl text-xs text-[var(--text-body)] flex items-center justify-between gap-4">
                   <span>
                     Dispatch prepared and copied to your clipboard. You can paste it directly into an email to{' '}
-                    <strong className="text-[#10B981]">{PROFILE_DATA.email}</strong> or message on LinkedIn.
+                    <strong className="text-[var(--accent-text)]">{PROFILE_DATA.email}</strong> or message on LinkedIn.
                   </span>
                   <button
                     type="button"
                     onClick={() => setDispatchConfirmed(false)}
-                    className="text-[#8A9990] hover:text-[#E4EBE6] underline shrink-0"
+                    className="text-[var(--text-muted)] hover:text-[var(--text-primary)] underline shrink-0"
                   >
                     Dismiss
                   </button>

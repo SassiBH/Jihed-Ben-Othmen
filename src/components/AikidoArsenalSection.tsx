@@ -24,33 +24,33 @@ export const AikidoArsenalSection: React.FC = () => {
   return (
     <section
       id="arsenal"
-      className="py-20 md:py-28 border-t border-[#16201B] bg-[#060907]"
+      className="py-20 md:py-28 border-t border-[var(--border-subtle)] bg-[var(--bg-section-alt)] transition-colors"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 space-y-20">
         {/* Part 1: Interactive Aikido System Flow Simulator */}
         <div className="space-y-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="max-w-2xl space-y-3">
-              <div className="text-xs font-mono-tabular text-[#8A9990]">
-                <span>合気道 · AIKIDO ARCHITECTURE SIMULATOR</span>
+              <div className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                <span className="text-[var(--text-primary)] font-medium">合気道 · AIKIDO ARCHITECTURE SIMULATOR</span>
                 <span className="mx-2" aria-hidden="true">·</span>
-                <span className="text-[#10B981]">REDIRECTING SYSTEM LOAD INTO HARMONY</span>
+                <span className="text-[var(--accent-text)] font-medium">REDIRECTING SYSTEM LOAD INTO HARMONY</span>
               </div>
-              <h2 className="text-2xl md:text-4xl font-semibold text-[#E4EBE6] tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-semibold text-[var(--text-primary)] tracking-tight">
                 02. The Aikido of Full-Stack Architecture
               </h2>
-              <p className="text-sm md:text-base text-[#9FB0A6] leading-relaxed">
-                In Aikido, an practitioner never collides head-on with incoming force — they blend with it
-                (<span className="text-[#E4EBE6]">Awase</span>), pivot around a stable center
-                (<span className="text-[#E4EBE6]">Tenkan</span>), and redirect energy into a decisive resolution
-                (<span className="text-[#E4EBE6]">Kime</span>). Inspect how Jihed applies this principle to real
+              <p className="text-sm md:text-base text-[var(--text-body)] leading-relaxed">
+                In Aikido, a practitioner never collides head-on with incoming force — they blend with it
+                (<span className="text-[var(--text-primary)] font-medium">Awase</span>), pivot around a stable center
+                (<span className="text-[var(--text-primary)] font-medium">Tenkan</span>), and redirect energy into a decisive resolution
+                (<span className="text-[var(--text-primary)] font-medium">Kime</span>). Inspect how Jihed applies this principle to real
                 production systems.
               </p>
             </div>
 
             {/* Interactive Segmented Kata Selector */}
             <div
-              className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[#0C120F] border border-[#18241E] rounded-xl self-start"
+              className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl self-start"
               role="tablist"
               aria-label="Select Architecture Kata Scenario"
             >
@@ -68,11 +68,16 @@ export const AikidoArsenalSection: React.FC = () => {
                     }}
                     className={`px-3.5 py-2 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                       isActive
-                        ? 'bg-[#10B981] text-[#050505] font-semibold'
-                        : 'text-[#95A69C] hover:text-[#E4EBE6] hover:bg-[#121B16]'
+                        ? 'bg-[#38BDF8] text-[#050505] font-semibold'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-control)]'
                     }`}
                   >
-                    Kata 0{idx + 1} · {kata.id === 'kata-ai-media' ? 'AI Media Stream' : kata.id === 'kata-realtime-marketplace' ? 'WebSocket Marketplace' : 'Saudi E-Commerce RBAC'}
+                    Kata 0{idx + 1} ·{' '}
+                    {kata.id === 'kata-ai-media'
+                      ? 'AI Media Stream'
+                      : kata.id === 'kata-realtime-marketplace'
+                      ? 'WebSocket Marketplace'
+                      : 'Saudi E-Commerce RBAC'}
                   </button>
                 );
               })}
@@ -80,26 +85,26 @@ export const AikidoArsenalSection: React.FC = () => {
           </div>
 
           {/* Interactive Kata Canvas Container (Single-Level Card Elevation) */}
-          <div className="p-6 md:p-8 bg-[#0A0E0C] border border-[#19251F] rounded-2xl space-y-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#16201B]">
+          <div className="p-6 md:p-8 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl space-y-8 transition-colors">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[var(--border-subtle)]">
               <div>
-                <div className="text-xs font-mono-tabular text-[#10B981] mb-1">
+                <div className="text-xs font-mono-tabular text-[var(--accent-text)] font-medium mb-1">
                   {currentKata.japaneseName}
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-[#E4EBE6]">
+                <h3 className="text-lg md:text-xl font-semibold text-[var(--text-primary)]">
                   {currentKata.name}
                 </h3>
               </div>
 
               <div className="flex items-center gap-6 text-xs font-mono-tabular">
                 <div>
-                  <span className="text-[#7E8F85] block">LATENCY TARGET</span>
-                  <span className="text-[#10B981] text-sm font-semibold">{currentKata.latencyTarget}</span>
+                  <span className="text-[var(--text-muted)] block">LATENCY TARGET</span>
+                  <span className="text-[var(--accent-text)] text-sm font-semibold">{currentKata.latencyTarget}</span>
                 </div>
-                <div className="h-8 w-px bg-[#18241E]" />
+                <div className="h-8 w-px bg-[var(--border-subtle)]" />
                 <div>
-                  <span className="text-[#7E8F85] block">MEASURED OUTCOME</span>
-                  <span className="text-[#E4EBE6] text-sm font-semibold">{currentKata.efficiencyGain}</span>
+                  <span className="text-[var(--text-muted)] block">MEASURED OUTCOME</span>
+                  <span className="text-[var(--text-primary)] text-sm font-semibold">{currentKata.efficiencyGain}</span>
                 </div>
               </div>
             </div>
@@ -115,26 +120,26 @@ export const AikidoArsenalSection: React.FC = () => {
                     onClick={() => setActiveNodeIndex(index)}
                     className={`text-left p-5 rounded-xl border transition-all duration-150 flex flex-col justify-between ${
                       isSelected
-                        ? 'bg-[#0F1914] border-[#10B981]'
-                        : 'bg-[#080B09] border-[#16201B] hover:border-[#24382E]'
+                        ? 'bg-[var(--bg-active-tint)] border-[#38BDF8]'
+                        : 'bg-[var(--bg-card-alt)] border-[var(--border-subtle)] hover:border-[var(--border-strong)]'
                     }`}
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-xs font-mono-tabular">
-                        <span className={isSelected ? 'text-[#10B981]' : 'text-[#7E8F85]'}>
+                        <span className={isSelected ? 'text-[var(--accent-text)] font-semibold' : 'text-[var(--text-muted)]'}>
                           {node.stage}
                         </span>
                         <ArrowRight
                           className={`w-3.5 h-3.5 transition-transform ${
-                            isSelected ? 'text-[#10B981] translate-x-0.5' : 'text-[#49574F]'
+                            isSelected ? 'text-[var(--accent-text)] translate-x-0.5' : 'text-[var(--text-muted)]'
                           }`}
                         />
                       </div>
-                      <div className="text-sm font-semibold text-[#E4EBE6]">{node.tech}</div>
-                      <p className="text-xs text-[#95A69C] leading-relaxed">{node.role}</p>
+                      <div className="text-sm font-semibold text-[var(--text-primary)]">{node.tech}</div>
+                      <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{node.role}</p>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-[#151F1A] text-[11px] text-[#7E8F85]">
+                    <div className="mt-4 pt-3 border-t border-[var(--border-subtle)] text-[11px] text-[var(--text-muted)]">
                       {node.detail}
                     </div>
                   </button>
@@ -143,13 +148,13 @@ export const AikidoArsenalSection: React.FC = () => {
             </div>
 
             {/* Active Redirection Explanation Strip */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-2 text-xs md:text-sm text-[#B8C7BE]">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-2 text-xs md:text-sm text-[var(--text-body)]">
               <div>
-                <span className="text-[#8A9990] font-mono-tabular">INCOMING FORCE: </span>
+                <span className="text-[var(--text-primary)] font-semibold font-mono-tabular">INCOMING FORCE: </span>
                 <span>{currentKata.incomingForce}</span>
               </div>
               <div className="md:text-right">
-                <span className="text-[#10B981] font-mono-tabular">AIKIDO REDIRECTION: </span>
+                <span className="text-[var(--accent-text)] font-semibold font-mono-tabular">AIKIDO REDIRECTION: </span>
                 <span>{currentKata.redirectionPrinciple}</span>
               </div>
             </div>
@@ -157,22 +162,22 @@ export const AikidoArsenalSection: React.FC = () => {
         </div>
 
         {/* Part 2: Complete Technical Arsenal (Filterable by Martial Discipline) */}
-        <div className="space-y-8 pt-6 border-t border-[#16201B]">
+        <div className="space-y-8 pt-6 border-t border-[var(--border-subtle)]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-2">
-              <div className="text-xs font-mono-tabular text-[#8A9990]">
-                <span>武具 · TECHNICAL DOJO ARSENAL</span>
+              <div className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                <span className="text-[var(--text-primary)] font-medium">武具 · TECHNICAL DOJO ARSENAL</span>
                 <span className="mx-2" aria-hidden="true">·</span>
-                <span className="text-[#10B981]">VERIFIED PRODUCTION STACK</span>
+                <span className="text-[var(--accent-text)] font-medium">VERIFIED PRODUCTION STACK</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-semibold text-[#E4EBE6]">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[var(--text-primary)]">
                 Forged Weapons & Frameworks
               </h3>
             </div>
 
             {/* Interactive Segmented Filter Controls */}
             <div
-              className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[#0C120F] border border-[#18241E] rounded-xl self-start"
+              className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl self-start"
               role="tablist"
               aria-label="Filter Technical Skills by Discipline"
             >
@@ -196,8 +201,8 @@ export const AikidoArsenalSection: React.FC = () => {
                     }
                     className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                       active
-                        ? 'bg-[#10B981] text-[#050505] font-semibold'
-                        : 'text-[#95A69C] hover:text-[#E4EBE6]'
+                        ? 'bg-[#38BDF8] text-[#050505] font-semibold'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                     }`}
                   >
                     {tab.label}
@@ -212,16 +217,16 @@ export const AikidoArsenalSection: React.FC = () => {
             {filteredDisciplines.map((discipline) => (
               <div
                 key={discipline.id}
-                className="pt-6 border-t border-[#141E19] first:border-t-0 first:pt-0 grid grid-cols-1 lg:grid-cols-12 gap-6"
+                className="pt-6 border-t border-[var(--border-subtle)] first:border-t-0 first:pt-0 grid grid-cols-1 lg:grid-cols-12 gap-6"
               >
                 <div className="lg:col-span-4 space-y-2">
-                  <div className="text-xs font-mono-tabular text-[#10B981]">
+                  <div className="text-xs font-mono-tabular text-[var(--accent-text)] font-medium">
                     {discipline.japaneseTitle}
                   </div>
-                  <h4 className="text-lg font-semibold text-[#E4EBE6]">
+                  <h4 className="text-lg font-semibold text-[var(--text-primary)]">
                     {discipline.englishTitle}
                   </h4>
-                  <p className="text-xs text-[#8A9990] leading-relaxed pr-4">
+                  <p className="text-xs text-[var(--text-muted)] leading-relaxed pr-4">
                     {discipline.philosophy}
                   </p>
                 </div>
@@ -230,20 +235,20 @@ export const AikidoArsenalSection: React.FC = () => {
                   {discipline.items.map((skill) => (
                     <div
                       key={skill.name}
-                      className="p-5 bg-[#0A0E0C] border border-[#17231C] hover:border-[#10B981]/60 rounded-xl transition-colors flex flex-col justify-between"
+                      className="p-5 bg-[var(--bg-card)] border border-[var(--border-card)] hover:border-[#38BDF8] rounded-xl transition-colors flex flex-col justify-between"
                     >
                       <div>
                         <div className="flex items-baseline justify-between gap-2">
-                          <span className="text-base font-semibold text-[#E4EBE6]">
+                          <span className="text-base font-semibold text-[var(--text-primary)]">
                             {skill.name}
                           </span>
-                          <span className="text-xs font-mono-tabular text-[#10B981] shrink-0">
+                          <span className="text-xs font-mono-tabular text-[var(--accent-text)] font-medium shrink-0">
                             {skill.yearsOrProjects}
                           </span>
                         </div>
-                        <div className="text-xs text-[#A3B3A9] mt-1">{skill.domain}</div>
+                        <div className="text-xs text-[var(--text-secondary)] mt-1">{skill.domain}</div>
                       </div>
-                      <p className="text-xs text-[#7E8F85] mt-3 pt-3 border-t border-[#131C17] leading-relaxed">
+                      <p className="text-xs text-[var(--text-muted)] mt-3 pt-3 border-t border-[var(--border-subtle)] leading-relaxed">
                         {skill.experienceContext}
                       </p>
                     </div>

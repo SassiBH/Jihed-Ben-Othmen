@@ -64,7 +64,7 @@ export const PROFILE_DATA = {
   github: 'https://github.com/jihed-ben-othmen',
   githubHandle: '/jihed-ben-othmen',
   availability: 'Seeking a full-time role in a product-focused company',
-  heroImage: '/src/assets/images/hero_samurai_aikido_dojo_1791378701200.jpg',
+  heroImage: '/src/assets/images/hero_samurai_aikido_lightblue_1791380507772.jpg',
   summary:
     'Full Stack Developer with 3+ years of experience building production web and mobile applications. Specialized in React.js, Node.js, and Python, with hands-on experience integrating AI/ML APIs into real-world products. Comfortable across the full stack — from REST API design and database modeling to responsive frontend interfaces and Flutter mobile apps. Experienced in Agile teams and autonomous freelance delivery.',
   martialCreed: {
@@ -153,7 +153,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     category: 'ai',
     categoryLabel: 'AI & Python Full-Stack',
     bentoSpan: 'wide',
-    image: '/src/assets/images/project_ai_media_engine_1791378712826.jpg',
+    image: '/src/assets/images/project_ai_lightblue_1791380524788.jpg',
     svgMotif: 'enso-wave',
     summary:
       'Confidential AI-powered web application engineered solo from initial system design to production deployment, automating high-volume audio and video processing with advanced machine learning capabilities.',
@@ -183,7 +183,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     category: 'mobile',
     categoryLabel: 'Flutter & Spring Boot Ecosystem',
     bentoSpan: 'standard',
-    image: '/src/assets/images/project_epirana_marketplace_1791378722218.jpg',
+    image: '/src/assets/images/project_epirana_lightblue_1791380537949.jpg',
     svgMotif: 'aikido-orbit',
     summary:
       'Dual-platform ecosystem connecting clients with local service providers via an iOS/Android Flutter mobile app and an Angular administrative control center powered by Spring Boot and PostgreSQL.',
@@ -213,7 +213,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     category: 'web',
     categoryLabel: 'Angular E-Commerce & RBAC',
     bentoSpan: 'standard',
-    image: '/src/assets/images/project_wimobi_ecommerce_1791378733529.jpg',
+    image: '/src/assets/images/project_wimobi_lightblue_1791380554216.jpg',
     svgMotif: 'katana-mesh',
     summary:
       'Cross-device e-commerce platform dedicated to pet products and veterinary/care services across Saudi Arabia, engineered for seamless parity across desktop browsers and Android/iOS mobile viewports.',
@@ -244,7 +244,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     category: 'web',
     categoryLabel: 'Enterprise React & Java API',
     bentoSpan: 'wide',
-    image: '/src/assets/images/project_sopra_enterprise_1791378743970.jpg',
+    image: '/src/assets/images/project_sopra_lightblue_1791380568171.jpg',
     svgMotif: 'steel-grid',
     summary:
       'Enterprise front-end Guided Process (GP) management module built with ReactJS and Java API integrations for Sopra HR’s GP4YOU platform serving German enterprise organizations.',

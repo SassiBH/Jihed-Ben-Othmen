@@ -5,14 +5,77 @@
     --font-display: 'Cinzel', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Mode: Crisp Alabaster Washi & Sky Blue Steel Dojo */
+    --bg-canvas: #F4F8FB;
+    --bg-section-alt: #EAF2F9;
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #EDF5FC;
+    --bg-control: #E1EEF8;
+    --bg-control-hover: #CFE4F5;
+    --bg-active-tint: #E0F2FE;
+    --border-subtle: #D5E3F0;
+    --border-card: #C4D7E9;
+    --border-strong: #7CC2EB;
+    --text-primary: #0B1724;
+    --text-body: #253A4E;
+    --text-secondary: #3F5870;
+    --text-muted: #56718C;
+    --accent-primary: #38BDF8;
+    --accent-hover: #0EA5E9;
+    --accent-text: #0284C7;
+    --accent-contrast: #07131E;
+    --header-bg: rgba(244, 248, 251, 0.92);
+    --side-art-main: #09131E;
+    --side-art-accent: #0284C7;
+    --motif-grid: #D6E6F4;
+    --motif-stroke-primary: #09131E;
+    --motif-stroke-secondary: #0284C7;
+    --motif-fill-center: #FFFFFF;
+    --overlay-scrim-strong: rgba(255, 255, 255, 0.94);
+    --overlay-scrim-mid: rgba(244, 248, 251, 0.72);
+    --modal-backdrop: rgba(15, 29, 44, 0.45);
+  }
+
+  html.dark {
+    /* Dark Mode: Stark Obsidian & Light Blue Dojo */
+    --bg-canvas: #050505;
+    --bg-section-alt: #06090D;
+    --bg-card: #090E15;
+    --bg-card-alt: #0A1017;
+    --bg-control: #0B121A;
+    --bg-control-hover: #13202E;
+    --bg-active-tint: #0D1824;
+    --border-subtle: #142230;
+    --border-card: #162636;
+    --border-strong: #1B2E44;
+    --text-primary: #FFFFFF;
+    --text-body: #B8CCE0;
+    --text-secondary: #94A8BE;
+    --text-muted: #7890A8;
+    --accent-primary: #38BDF8;
+    --accent-hover: #7DD3FC;
+    --accent-text: #38BDF8;
+    --accent-contrast: #050505;
+    --header-bg: rgba(5, 5, 5, 0.9);
+    --side-art-main: #FFFFFF;
+    --side-art-accent: #38BDF8;
+    --motif-grid: #121E2B;
+    --motif-stroke-primary: #FFFFFF;
+    --motif-stroke-secondary: #38BDF8;
+    --motif-fill-center: #050505;
+    --overlay-scrim-strong: rgba(5, 5, 5, 0.92);
+    --overlay-scrim-mid: rgba(5, 5, 5, 0.48);
+    --modal-backdrop: rgba(0, 0, 0, 0.8);
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #050505;
-    color: #E4EBE6;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
     letter-spacing: 0.01em;
     overflow-x: hidden;
+    transition: background-color 150ms ease, color 150ms ease;
   }
 
   h1, h2, h3, .font-display {
@@ -50,4 +113,3 @@
     animation: none;
   }
 }
-
